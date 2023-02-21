@@ -1,4 +1,9 @@
-IP=$1
+if [ -n "$1" ] && [[ $1 =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+  IP="$1"
+else
+  IP=$(curl -s http://whatismyip.akamai.com/)
+fi
+
 OVPN_DATA="ovpn-data"
 CIPHER="AES-256-CBC"
 
