@@ -7,4 +7,6 @@ docker run --rm -it -v $OVPN_DATA:/etc/openvpn kylemanna/openvpn ovpn_revokeclie
 # make sure no leftovers
 docker run --rm -it -v $OVPN_DATA:/etc/openvpn kylemanna/openvpn rm /etc/openvpn/pki/reqs/$USER.req
 docker run --rm -it -v $OVPN_DATA:/etc/openvpn kylemanna/openvpn rm /etc/openvpn/pki/private/$USER.key
+docker run --rm -it -v $OVPN_DATA:/etc/openvpn kylemanna/openvpn rm /etc/openvpn/pki/issued/$USER.crt
+
 
